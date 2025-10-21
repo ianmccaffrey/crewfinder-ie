@@ -18,9 +18,27 @@
             overflow-x: hidden;
         }
 
-        .header {
+        .top-banner {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 0.8rem;
+            font-size: 0.95rem;
             position: fixed;
             top: 0;
+            width: 100%;
+            z-index: 1001;
+        }
+
+        .top-banner a {
+            color: #00d4aa;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        .header {
+            position: fixed;
+            top: 42px;
             width: 100%;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -106,7 +124,7 @@
         }
 
         .hero {
-            margin-top: 80px;
+            margin-top: 122px;
             min-height: 90vh;
             display: flex;
             align-items: center;
@@ -385,15 +403,20 @@
     </style>
 </head>
 <body>
+    <div class="top-banner">
+        Join Ireland's fastest-growing film & TV job platform - <a href="#">Get Started Free</a>
+    </div>
+    
     <header class="header">
         <nav>
             <div class="logo">
                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 850 260'%3E%3C!-- Magnifying glass circle --%3E%3Ccircle cx='130' cy='130' r='85' fill='none' stroke='%23169B7E' stroke-width='28'/%3E%3C!-- Person head --%3E%3Ccircle cx='130' cy='110' r='28' fill='%23169B7E'/%3E%3C!-- Person body --%3E%3Cpath d='M 95 145 Q 95 160 105 165 L 105 180 Q 105 185 110 185 L 150 185 Q 155 185 155 180 L 155 165 Q 165 160 165 145 Z' fill='%23169B7E'/%3E%3C!-- Magnifying glass handle --%3E%3Cpath d='M 185 185 L 245 245 Q 255 255 265 245 Q 275 235 265 225 L 205 165' fill='%23169B7E' stroke='%23169B7E' stroke-width='8' stroke-linecap='round'/%3E%3C!-- Text 'Crew' --%3E%3Ctext x='320' y='140' font-family='Arial, sans-serif' font-size='110' font-weight='bold' fill='%231a1a1a'%3ECrew%3C/text%3E%3C!-- Text 'Finder' --%3E%3Ctext x='320' y='235' font-family='Arial, sans-serif' font-size='110' font-weight='bold' fill='%231a1a1a'%3EFinder%3C/text%3E%3C/svg%3E" alt="CrewFinder Logo">
             </div>
             <div class="nav-links">
+                <a href="#" style="font-weight: 600;">Find a Job</a>
+                <a href="#" style="font-weight: 600;">Post a Job</a>
                 <a href="#features">Features</a>
                 <a href="#roles">Browse Roles</a>
-                <a href="#about">About</a>
                 <a href="#" class="btn-primary">Get Started</a>
             </div>
         </nav>
