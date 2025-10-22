@@ -1,4 +1,13 @@
-<!DOCTYPE html>
+.stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #00d4aa;
+            display: block;
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9rem<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -129,10 +138,10 @@
             display: flex;
             align-items: center;
             background: linear-gradient(rgba(0, 40, 70, 0.7), rgba(0, 60, 90, 0.8)), 
-                        url('Bacjground image 2.png') center/cover;
+                        url('https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=1600') center/cover;
             position: relative;
             overflow: hidden;
-        }
+        }ACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA
 
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
@@ -252,11 +261,19 @@
         .features {
             padding: 6rem 5%;
             background: white;
+            position: relative;
         }
 
         .features-container {
             max-width: 1400px;
             margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 4rem;
+        }
+
+        .features-main {
+            min-width: 0;
         }
 
         .section-title {
@@ -370,6 +387,109 @@
             opacity: 0.95;
         }
 
+        .email-signup {
+            padding: 5rem 5%;
+            background: #f5f5f5;
+        }
+
+        .email-signup-content {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .email-signup h2 {
+            font-size: 2rem;
+            color: #666;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .signup-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .signup-form input,
+        .signup-form select {
+            padding: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            background: white;
+        }
+
+        .signup-form input:focus,
+        .signup-form select:focus {
+            outline: none;
+            border-color: #ff6600;
+        }
+
+        .btn-signup {
+            background: white;
+            color: #ff6600;
+            padding: 1rem 2rem;
+            border: 3px solid #ff6600;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-signup:hover {
+            background: #ff6600;
+            color: white;
+        }
+
+        .sticky-sidebar {
+            position: sticky;
+            top: 140px;
+            background: #f5f5f5;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .sticky-sidebar h3 {
+            font-size: 1.5rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            line-height: 1.3;
+            text-align: center;
+        }
+
+        .sidebar-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .sidebar-form input,
+        .sidebar-form select {
+            padding: 0.9rem;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            background: white;
+        }
+
+        .sidebar-form input:focus,
+        .sidebar-form select:focus {
+            outline: none;
+            border-color: #ff6600;
+        }
+
+        .sidebar-form .btn-signup {
+            padding: 0.9rem;
+            font-size: 1rem;
+        }
+
         .footer {
             background: #1a1a1a;
             color: white;
@@ -398,6 +518,15 @@
             .stats {
                 flex-direction: column;
                 gap: 1rem;
+            }
+
+            .features-container {
+                grid-template-columns: 1fr;
+            }
+
+            .sticky-sidebar {
+                position: relative;
+                top: 0;
             }
         }
     </style>
@@ -471,40 +600,65 @@
 
     <section id="features" class="features">
         <div class="features-container">
-            <h2 class="section-title">Why Choose CrewFinder.ie?</h2>
-            <p class="section-subtitle">Built specifically for Ireland's film and television industry</p>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🎬</div>
-                    <h3 class="feature-title">Industry-Specific</h3>
-                    <p class="feature-description">Tailored exclusively for Ireland's film, TV, animation, and commercial production sectors with local expertise.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔍</div>
-                    <h3 class="feature-title">Smart Matching</h3>
-                    <p class="feature-description">Advanced algorithms connect the right crew with the right projects based on skills, experience, and availability.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3 class="feature-title">Instant Notifications</h3>
-                    <p class="feature-description">Get real-time alerts for jobs matching your profile. Never miss an opportunity in your area.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <h3 class="feature-title">Portfolio Showcase</h3>
-                    <p class="feature-description">Build stunning professional profiles with your reel, credits, skills, and recommendations all in one place.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🤝</div>
-                    <h3 class="feature-title">Network Building</h3>
-                    <p class="feature-description">Connect with industry professionals, join projects, and grow your network across Ireland.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🇮🇪</div>
-                    <h3 class="feature-title">Local Focus</h3>
-                    <p class="feature-description">Supporting Irish talent and productions with location-based search and regional opportunities.</p>
+            <div class="features-main">
+                <h2 class="section-title">Why Choose CrewFinder.ie?</h2>
+                <p class="section-subtitle">Built specifically for Ireland's film and television industry</p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎬</div>
+                        <h3 class="feature-title">Industry-Specific</h3>
+                        <p class="feature-description">Tailored exclusively for Ireland's film, TV, animation, and commercial production sectors with local expertise.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <h3 class="feature-title">Smart Matching</h3>
+                        <p class="feature-description">Advanced algorithms connect the right crew with the right projects based on skills, experience, and availability.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3 class="feature-title">Instant Notifications</h3>
+                        <p class="feature-description">Get real-time alerts for jobs matching your profile. Never miss an opportunity in your area.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3 class="feature-title">Portfolio Showcase</h3>
+                        <p class="feature-description">Build stunning professional profiles with your reel, credits, skills, and recommendations all in one place.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤝</div>
+                        <h3 class="feature-title">Network Building</h3>
+                        <p class="feature-description">Connect with industry professionals, join projects, and grow your network across Ireland.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🇮🇪</div>
+                        <h3 class="feature-title">Local Focus</h3>
+                        <p class="feature-description">Supporting Irish talent and productions with location-based search and regional opportunities.</p>
+                    </div>
                 </div>
             </div>
+            
+            <aside class="sticky-sidebar">
+                <h3>Latest job alerts direct to your inbox</h3>
+                <form class="sidebar-form" onsubmit="return false;">
+                    <input type="email" placeholder="your.email@example.com" required>
+                    <select required>
+                        <option value="">Select Your Role</option>
+                        <option value="camera">Camera Department</option>
+                        <option value="sound">Sound & Audio</option>
+                        <option value="lighting">Lighting & Grip</option>
+                        <option value="production">Production</option>
+                        <option value="art">Art Department</option>
+                        <option value="post">Post-Production</option>
+                        <option value="animation">Animation</option>
+                        <option value="vfx">VFX & CGI</option>
+                        <option value="hair-makeup">Hair & Makeup</option>
+                        <option value="costume">Costume Design</option>
+                        <option value="locations">Locations</option>
+                        <option value="stunts">Stunts</option>
+                    </select>
+                    <button type="submit" class="btn-signup">Send Me Job Alerts</button>
+                </form>
+            </aside>
         </div>
     </section>
 
@@ -534,6 +688,31 @@
             <h2>Ready to Join Ireland's Film Community?</h2>
             <p>Whether you're looking to hire exceptional talent or find your next great opportunity, CrewFinder.ie connects you with Ireland's best.</p>
             <a href="#" class="btn-primary" style="background: white; color: #00a86b;">Get Started Today</a>
+        </div>
+    </section>
+
+    <section class="email-signup">
+        <div class="email-signup-content">
+            <h2>Latest job alerts direct to your inbox</h2>
+            <form class="signup-form" onsubmit="return false;">
+                <input type="email" placeholder="your.email@example.com" required>
+                <select required>
+                    <option value="">Select Your Role</option>
+                    <option value="camera">Camera Department</option>
+                    <option value="sound">Sound & Audio</option>
+                    <option value="lighting">Lighting & Grip</option>
+                    <option value="production">Production</option>
+                    <option value="art">Art Department</option>
+                    <option value="post">Post-Production</option>
+                    <option value="animation">Animation</option>
+                    <option value="vfx">VFX & CGI</option>
+                    <option value="hair-makeup">Hair & Makeup</option>
+                    <option value="costume">Costume Design</option>
+                    <option value="locations">Locations</option>
+                    <option value="stunts">Stunts</option>
+                </select>
+                <button type="submit" class="btn-signup">Send Me Job Alerts</button>
+            </form>
         </div>
     </section>
 
